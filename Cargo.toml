@@ -10,3 +10,7 @@ rand = "0.8"
 num-bigint = { version = "0.4.4", features = ["rand"] }
 num-traits = "0.2"
 num-primes = "0.2.0"
+
+[profile.release]
+lto = true
+target-cpu = "native"
