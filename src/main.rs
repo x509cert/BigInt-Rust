@@ -27,7 +27,7 @@ fn main() {
   let q = convert_to_bigint_from_num_bigint(Generator::new_prime(BITS));
   
   // Multiply to get the modulus (n)
-  println!("Multiplying p and q".);
+  println!("Multiplying p and q.");
   let n = &p * &q;
   println!("p: {} digits, {}", count_digits(&p), p);
   println!("q: {} digits, {}", count_digits(&q), q);
