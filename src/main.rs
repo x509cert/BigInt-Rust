@@ -21,10 +21,13 @@ fn main() {
 
   // Generate two primes (p,q) of n-bits each
   println!("Generating large primes, p & q, please be patient.");
+  println!("Generating p.");
   let p = convert_to_bigint_from_num_bigint(Generator::new_prime(BITS));
+  println!("Generating q.");
   let q = convert_to_bigint_from_num_bigint(Generator::new_prime(BITS));
   
   // Multiply to get the modulus (n)
+  println!("Multiplying p and q".);
   let n = &p * &q;
   println!("p: {} digits, {}", count_digits(&p), p);
   println!("q: {} digits, {}", count_digits(&q), q);
